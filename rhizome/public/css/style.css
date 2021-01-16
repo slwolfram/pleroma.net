@@ -2,11 +2,16 @@ body {
     background-color: black;
 }
 
-#tree-of-life {
+#treeoflife {
     background-image: url("treeoflife.jpeg");
     min-height: 750px;
     max-width: 425px;
-    margin-left: 100px;
+    margin-left: 25px;
+}
+
+table {
+    height: 0px;
+    min-height: 100vh;
 }
 
 

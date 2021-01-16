@@ -14,23 +14,18 @@
 (defn navbar [])
 
 (defn header []
-  [:div
-   [:h1 "pleroma|net"]
-   ;;[:p "main      0        1        2"]
-   ])
+  [:h1 "pleroma|net"]
+  )
 
 (defn tree-of-life []
-  [:div
-   {:id "tree-of-life"}
-  (comment
-  [:table
-   [:tbody
-    [:tr [:td 0] [:td 1] [:td 2] [:td 3] [:td "O"] [:td 0] [:td 1] [:td 2] [:td 3]]
-    [:tr [:td 1] [:td 2] [:td 4] [:td 7] [:td]]
-    [:tr [:td 2] [:td 3] [:td 7] [:td 4] [:td]]
-    [:tr [:td 3] [:td 4] [:td 1] [:td 5] [:td]]
-    [:tr [:td] [:td] [:td] [:td] [:td]]]])]
-)
+  [:div {:id "treeoflife"}
+   [:table {:style {:width "100%"}}
+    [:tbody
+     [:tr [:td 0] [:td 1] [:td 2] [:td 3] [:td "O"] [:td 0] [:td 1] [:td 2] [:td 3]]
+     [:tr [:td 1] [:td 2] [:td 4] [:td 7] [:td]]
+     [:tr [:td 2] [:td 3] [:td 7] [:td 4] [:td]]
+     [:tr [:td 3] [:td 4] [:td 1] [:td 5] [:td]]
+     [:tr [:td] [:td] [:td] [:td] [:td]]]]])
 
 (defn hello []
 
