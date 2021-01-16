@@ -13,7 +13,7 @@
 (defn navbar [])
 
 (defn header []
-  [:h1 "pleroma_net"]
+  [:h1 "pleroma|net"]
   )
 
 (defn hello []
