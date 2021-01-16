@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+}
+
+#tree-of-life {
+    background-image: url("treeoflife.jpeg");
+    min-height: 750px;
+    max-width: 425px;
+    margin-left: 100px;
+}
+
+
