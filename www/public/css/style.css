@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+    font-family: 'Courier';
+    color: #DEFF00;
+}
+
+#treeoflife {
+    background-image: url("treeoflife.jpeg");
+    min-height: 750px;
+    max-width: 425px;
+    margin-left: 25px;
+}
+
+table {
+    height: 0px;
+    min-height: 100vh;
+}
+
+.zoom {
+}
+
+.zoom:hover {
+    transform: scale(1.5);
+    transform-origin: 250px 650px;
+}
+
