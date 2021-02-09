@@ -13,5 +13,5 @@
  {:app {:output-dir "public/compiledjs/"
         :asset-path "compiledjs"
         :target :browser
-        :modules {:main {:init-fn pleromanet.main/main!}}
-        :devtools {:after-load pleromanet.main/reload!}}}}
+        :modules {:main {:init-fn pleromanet.core/init!}}
+        :devtools {:after-load pleromanet.core/reload!}}}}
