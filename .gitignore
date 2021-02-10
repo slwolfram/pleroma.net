@@ -1,2 +1,5 @@
-www/public/compiledjs/*
-www/node_modules
+**/compiledjs/*
+**/node_modules
+**/.clj-kondo
+**/.lsp
+**/.shadow-cljs
