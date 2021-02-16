@@ -4,11 +4,20 @@ body {
     color: #DEFF00;
 }
 
-#treeoflife {
-    background-image: url("treeoflife.jpeg");
+#x {
+    background-image: url("../images/fool.png");
     min-height: 750px;
     max-width: 425px;
     margin-left: 25px;
+}
+
+a.visited {
+    color: #9bb300;
+}
+
+
+a {
+    color: #9bb300;
 }
 
 table {

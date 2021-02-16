@@ -16,9 +16,12 @@
   [:> Router
    [:div
     [main/header]
-    [:nav [:ul
-           [:li [:> Link {:to "/"} "Home"]]
-           [:li [:> Link {:to "/about/"} "About"]]]]
+    [:nav [:ul {:style {:white-space "nowrap" :font-size "20px"}}
+           [:li {:style {:display "inline" :margin "10px"}}
+            [:> Link {:to "/"} "~"]]
+           ;;[:li [:> Link {:to "/about/"} "About"]
+           [:li {:style {:display "inline" :margin "10px"}}
+            [:> Link {:to "/fool"} "0"]]]]
     [:> Route {:path "/" :exact true :component (get-react-component tol/tol)}]
     [:> Route {:path "/about/" :component (get-react-component about)}]
     [:> Route {:path "/crown/" :component (get-react-component sephirot/crown)}]

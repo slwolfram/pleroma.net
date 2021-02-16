@@ -1,7 +1,38 @@
 (ns pleromanet.paths)
 
+(defn path [name background-img inner-div]
+  [:div
+   [:div {:id "fool-background"
+          :style {:background (str "url(../images/" background-img ")")
+                  :background-repeat "repeat"
+                  :background-size "cover"
+                  :height "60vh" :width "300px"
+                  :margin "40px"
+                  :padding "50px"
+                  :position "relative"}}
+
+    [:div {:class "layer"
+           :style {:background-color "rgba(0, 0, 0, 0.92)"
+                   :position "absolute"
+                   :top "0"
+                   :left "0"
+                   :width "100%"
+                   :height "100%"
+                   :border-style "outset"
+                   :border-color "#9bb300"
+                   :border-width "7px"
+                   :border-radius "25px"}}
+     [:h1 {:style {:margin "10px"}}
+      "0"]
+     [:h2 {:style {:margin "10px"}}
+      name]]]
+   inner-div])
+
 (defn magus [] [:h2 "Magus"])
-(defn fool [] [:h2 "Fool"])
+(defn fool []
+  (path "fool" "fool.png"
+        [:div ]))
+
 (defn high-priestess [] [:h2 "High Priestess"])
 (defn empress [] [:h2 "Empress"])
 (defn chariot [] [:h2 "Chariot"])
