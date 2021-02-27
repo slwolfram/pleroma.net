@@ -18,14 +18,14 @@ user_parser.add_argument("password", type=str, required=True, location="json")
 topic_parser = api.parser()
 topic_parser.add_argument("subject", type=str, required=True, location="form")
 topic_parser.add_argument("text", type=str, required=True, location="form")
-topic_parser.add_argument("image", type=werkzeug.datastructures.FileStorage, location="files")
+topic_parser.add_argument("file", type=werkzeug.datastructures.FileStorage, location="files")
 topic_parser.add_argument("created_by", type=str, required=True, location="form")
 # topic_parser.add_argument("file", type=werkzeug.datastructures.FileStorage, location="files")
 
 entry_parser = api.parser()
 entry_parser.add_argument("subject", type=str, required=True, location="json")
 entry_parser.add_argument("text", type=str, required=True, location="json")
-entry_parser.add_argument("image", type=werkzeug.datastructures.FileStorage, location="files")
+entry_parser.add_argument("file", type=werkzeug.datastructures.FileStorage, location="files")
 entry_parser.add_argument("created_by", type=str, required=True, location="json")
 entry_parser.add_argument("parent_id", type=str, required=False, location="json")
 # entry_parser.add_argument("file", type=werkzeug.datastructures.FileStorage, location="files")
@@ -35,7 +35,7 @@ def get_connstr(dbname):
             current_app.config["DB"][dbname])
 
 def init_admin():
-    return model.Admin(get_connstr("EINSOPH"))
+    return model.Admin(get_connstr("EINSOPH"), current_app.config["FILESTORAGE"])
 
 def init_sephira(sephira_id):
     return model.Sephira(
@@ -50,7 +50,8 @@ def init_sephira(sephira_id):
                     "NETZACH"   if sephira_id == 9 else
                     "YESOD"     if sephira_id == 10 else
                     "MALKUTH"   if sephira_id == 11 else
-                    None))
+                    None),
+        current_app.config["FILESTORAGE"])
 
 @api.route("/0/grades/")
 class ListGrades(Resource):

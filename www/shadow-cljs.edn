@@ -5,9 +5,12 @@
   "src/test"]
 
  :dependencies
- [[reagent "0.9.1"]]
+ [[reagent "0.9.1"]
+  [re-frame "1.1.2"]
+  [cljs-ajax "0.8.1"]
+  [tupelo "21.01.26b"]]
 
- :dev-http {8080 "public/"}
+ :dev-http {5000 "public/"}
 
  :builds
  {:app {:output-dir "public/compiledjs/"

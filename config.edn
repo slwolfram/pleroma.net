@@ -1,7 +1,7 @@
-{:HOST "localhost"
+{:HOST "0.0.0.0"
  :PORT "8080"
  :ENV "DEV"
- :DB {:CONNSTR "sqlite:///server/db/"
+ :DB {:CONNSTR "sqlite:///data/db/"
       :EINSOPH "0.db"
       :KETHER "1.db"
       :BINAH "2.db"
@@ -13,4 +13,6 @@
       :HOD "8.db"
       :NETZACH "9.db"
       :YESOD "10.db"
-      :MALKUTH "11.db"}}
+      :MALKUTH "11.db"}
+ :FILESTORAGE "data/files/"
+ :WEBROOT "../www/public"}

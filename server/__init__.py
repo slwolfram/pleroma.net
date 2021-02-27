@@ -1,5 +1,5 @@
 import os
-from flask import Flask as BaseFlask, Config as BaseConfig
+from flask import Flask as BaseFlask, Config as BaseConfig, send_from_directory
 from flask_cors import CORS
 import edn_format
 from server.api import bp
@@ -35,4 +35,14 @@ def create_app(config_fp):
     app.config.from_edn(config_fp)
     CORS(app)
     app.register_blueprint(bp, url_prefix='/api')
+
+    @app.route('/<path:resource>')
+    def public_resource(resource):
+        return send_from_directory(app.config['WEBROOT'], resource)
+
+    @app.route('/')
+    def index():
+        print('serving index')
+        return public_resource('index.html')
+
     return app

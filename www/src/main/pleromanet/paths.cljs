@@ -12,7 +12,7 @@
                   :position "relative"}}
 
     [:div {:class "layer"
-           :style {:background-color "rgba(0, 0, 0, 0.92)"
+           :style {:background-color "rgba(0, 0, 0, 0.85)"
                    :position "absolute"
                    :top "0"
                    :left "0"
